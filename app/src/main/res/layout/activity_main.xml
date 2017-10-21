@@ -18,4 +18,9 @@
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="8dp" />
 
+    <edu.ucsb.cs.cs184.jaredbjensen.jjensendrawingmultitouch.MySurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </android.widget.LinearLayout>
