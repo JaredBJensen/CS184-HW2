@@ -6,21 +6,64 @@
     android:layout_height="match_parent"
     tools:context="edu.ucsb.cs.cs184.jaredbjensen.jjensendrawingmultitouch.MainActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:background="?attr/colorPrimary"
-        android:titleTextColor="#FFFFFF"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?attr/colorPrimary"
+            app:titleTextColor="#FFFFFF"
+            app:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            tools:layout_editor_absoluteY="0dp"
+            tools:layout_editor_absoluteX="8dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Finger 1"
+                android:id="@+id/finger1"
+                android:onClick="onButtonTouched"
+                android:tag="0"
+                android:layout_weight=".25"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Finger 2"
+                android:id="@+id/finger2"
+                android:onClick="onButtonTouched"
+                android:tag="1"
+                android:layout_weight=".25"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Finger 3"
+                android:id="@+id/finger3"
+                android:onClick="onButtonTouched"
+                android:tag="2"
+                android:layout_weight=".25"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Finger 4"
+                android:id="@+id/finger4"
+                android:onClick="onButtonTouched"
+                android:tag="3"
+                android:layout_weight=".25"/>
+        </LinearLayout>
 
-    <edu.ucsb.cs.cs184.jaredbjensen.jjensendrawingmultitouch.MySurfaceView
-        android:id="@+id/surfaceView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <edu.ucsb.cs.cs184.jaredbjensen.jjensendrawingmultitouch.MySurfaceView
+            android:id="@+id/surfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
 </android.widget.LinearLayout>
